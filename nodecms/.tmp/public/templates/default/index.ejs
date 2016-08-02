@@ -1,0 +1,108 @@
+<% include ./header.ejs %>
+            <section class="grid-wrap" style="margin-top: 300px">
+                <header class="grid col-full">
+                    <hr>
+                    <p class="fleft">首页</p>
+                    <a href="/page/index/about" class="arrow fright">see more infos</a>
+                </header>
+                
+                <div class="grid col-one-half mq2-col-full">
+                                    
+                <h1 style="font-weight:normal;font-size:4.1em;color:#555555;font-family:'Open sans', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;">
+                    常州家谱馆简介 <br>
+                    <sub>本馆简介</sub>
+                    </h1>
+                    <p style="color:#555555;font-family:'Open sans', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;font-size:13px;">
+                        　　  常州家谱馆是由常州谱牒文化研究会会长朱炳国先生创办，常州市华音公益文化基金会（筹）谱牒文化基金资助的民间藏品馆，2015年12月常州家谱馆被常州市社科联授常州市社科示范基地。
+                        本馆珍藏新老谱及电子版家谱共1000余套，计10000余册，涉及江南地区近200个姓氏。同时，还有部分古老的谱牒木刻雕版。
+                        馆藏主题分为八大部分：姓氏起源、百姓图腾、家谱起源、修谱指南、常州祠堂简介、云溪名门、家谱实物、谱牒雕版，从不同方面展示与介绍谱牒文化常识。... [详细]<br>
+                    </p>
+                    <p style="color:#555555;font-family:'Open sans', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;font-size:13px;">
+                        We always put the site for the production of Web sites for the art design. We will use the code to achieve, always maintain the running of the server resources, but the protagonist is still the user's brand and designer.
+                    </p>
+                </div>
+
+                <div class="slider grid col-one-half mq2-col-full">
+                    <div class="flexslider">
+                        <div class="slides">
+                            <%products.forEach(function(one,key){%>
+                            <div class="slide">
+                                <figure>
+                                    <img src="<%=one.thumb%>" alt="">
+                                    <figcaption>
+                                    <div>
+                                        <h5><%=one.title%></h5>
+                                        <p style="text-align:left"><%-one.description%>, <a href="<%=one.url%>">查看</a></p>
+                                    </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <%})%>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >免费网站模板</a></div>
+            <section class="services grid-wrap">
+                <header class="grid col-full">
+                    <hr>
+                    <p class="fleft">新闻资讯</p>
+                    <a href="/index/news" class="arrow fright">see more news</a>
+                </header>
+                
+                <article class="grid col-one-third mq3-col-full">
+                <aside>01</aside>
+                <h5>馆内活动</h5>
+                <div>
+                    <li>终于在常州家谱馆 找到根  2016-06-18</li>
+                    <li>常州家谱馆最新动态 2016-06-18</li>
+                    <li>常州家谱馆最新动态 2016-06-18</li>
+                    <li>终于在常州家谱馆 找到根 2016-06-18</li>
+                </div>
+                </article>
+                
+                <article class="grid col-one-third mq3-col-full">
+                <aside>02</aside>
+                <h5>业界动态</h5>
+                <div>
+                    <li>谱牒研究精选文章     2016-06-18</li>
+                    <li>谱牒研究精选文章     2016-06-18</li>
+                    <li>谱牒研究精选文章     2016-06-18</li>
+                    <li>谱牒研究精选文章     2016-06-18</li>
+                </div>
+                </article>
+            
+            <article class="grid col-one-third mq3-col-full">
+            <aside>03</aside>
+            <h5>江南文化</h5>
+            <div>
+                <li>终于在常州家谱馆 找到根  2016-06-18</li>
+                <li>常州家谱馆最新动态 2016-06-18</li>
+                <li>常州家谱馆最新动态 2016-06-18</li>
+                <li>终于在常州家谱馆 找到根 2016-06-18</li>
+            </div>
+            </article>
+        </section>
+        <section class="works grid-wrap">
+            <header class="grid col-full">
+                <hr>
+                <p class="fleft">寻根问祖</p>
+                <a href="/index/product" class="arrow fright">see more works</a>
+            </header>
+        
+            <%products.forEach(function(one,key){%>
+            <figure class="grid col-one-quarter mq2-col-one-half" id="pic">
+                <a href="/index/product/<%=one.id%>">
+                    <img src="<%-one.thumb%>" alt="">
+                    <span class="zoom"></span>
+                </a>
+                <figcaption>
+                <a href="/index/product/<%=one.id%>" class="arrow"><%=one.title%></a>
+                <p><%-one.description%></p>
+                </figcaption>
+            </figure>
+            <%})%>
+        </section>
+<% include ./footer.ejs %>
+
