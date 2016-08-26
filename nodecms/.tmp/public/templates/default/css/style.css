@@ -201,7 +201,6 @@ body{
 .container {width: 90%; margin: 5em auto; max-width: 1100px; min-width: 300px;}
  
 .grid-wrap {
-	margin-bottom: -100px ;
   margin-left: -3em; /* the same as your gutter */
   overflow: hidden;
   *zoom:1;}
